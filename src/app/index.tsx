@@ -6,7 +6,7 @@ import { Grid } from '@mui/material';
 
 function App() {
   return (
-    <Grid className="app">
+    <Grid className="app" sx={{ pl: 2, pr: 2 }}>
       <Routing />
     </Grid>
   );
