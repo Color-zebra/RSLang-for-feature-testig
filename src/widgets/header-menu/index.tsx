@@ -22,13 +22,8 @@ const links: { title: string, href: string }[] = [
   },
 ]
 
-export const HeaderMenu = (props: {isColumn: boolean}) => {
-  const { headerMenuItemLink, active, headerMenu, column } = styles;
-
-  const checkDirection = (isColumn: boolean): string => {
-    return isColumn 
-    ? `${headerMenu} ${column}`
-    : headerMenu}
+export const HeaderMenu = () => {
+  const { headerMenuItemLink, active, headerMenu } = styles;
 
   const checkActive = ({ isActive }: { isActive: boolean }) => isActive
     ? `${headerMenuItemLink} ${active}`
@@ -42,7 +37,7 @@ export const HeaderMenu = (props: {isColumn: boolean}) => {
 
   return (
     <Box component="nav">
-      <List className={checkDirection(props.isColumn)}>
+      <List className={headerMenu}>
         {linksRendered}
       </List>
     </Box>
