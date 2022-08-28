@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.3b51bb67.css",
-    "main.js": "/static/js/main.1eeec521.js",
-    "static/js/787.0c3f432a.chunk.js": "/static/js/787.0c3f432a.chunk.js",
-    "static/media/main-background-image.jpg": "/static/media/main-background-image.e82607dc7df7ab804128.jpg",
-    "static/media/avatar-placeholder.jpg": "/static/media/avatar-placeholder.678cff7ad494d4c8d45b.jpg",
-    "static/media/youtube.svg": "/static/media/youtube.d3960f6407bc583fe35b.svg",
-    "static/media/github.svg": "/static/media/github.a61b960f2ce17e7b773b.svg",
-    "index.html": "/index.html",
-    "static/media/icon-reverse.svg": "/static/media/icon-reverse.97be468179275534f5a7.svg",
-    "main.3b51bb67.css.map": "/static/css/main.3b51bb67.css.map",
-    "main.1eeec521.js.map": "/static/js/main.1eeec521.js.map",
-    "787.0c3f432a.chunk.js.map": "/static/js/787.0c3f432a.chunk.js.map"
+    "main.css": "/RSLang-for-feature-testig/static/css/main.fbee761b.css",
+    "main.js": "/RSLang-for-feature-testig/static/js/main.bb905b09.js",
+    "static/js/787.0c3f432a.chunk.js": "/RSLang-for-feature-testig/static/js/787.0c3f432a.chunk.js",
+    "static/media/main-background-image.jpg": "/RSLang-for-feature-testig/static/media/main-background-image.e82607dc7df7ab804128.jpg",
+    "static/media/avatar-placeholder.jpg": "/RSLang-for-feature-testig/static/media/avatar-placeholder.678cff7ad494d4c8d45b.jpg",
+    "static/media/youtube.svg": "/RSLang-for-feature-testig/static/media/youtube.d3960f6407bc583fe35b.svg",
+    "static/media/github.svg": "/RSLang-for-feature-testig/static/media/github.a61b960f2ce17e7b773b.svg",
+    "index.html": "/RSLang-for-feature-testig/index.html",
+    "static/media/icon-reverse.svg": "/RSLang-for-feature-testig/static/media/icon-reverse.97be468179275534f5a7.svg",
+    "main.fbee761b.css.map": "/RSLang-for-feature-testig/static/css/main.fbee761b.css.map",
+    "main.bb905b09.js.map": "/RSLang-for-feature-testig/static/js/main.bb905b09.js.map",
+    "787.0c3f432a.chunk.js.map": "/RSLang-for-feature-testig/static/js/787.0c3f432a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b51bb67.css",
-    "static/js/main.1eeec521.js"
+    "static/css/main.fbee761b.css",
+    "static/js/main.bb905b09.js"
   ]
 }
