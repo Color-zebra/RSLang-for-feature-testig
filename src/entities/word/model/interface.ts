@@ -13,15 +13,5 @@ export interface Word {
   wordTranslate: string;
   textMeaningTranslate: string;
   textExampleTranslate: string;
-}
-
-export interface UserWord {
-  difficulty: string;
-  optional: {
-    totalUsed: number;
-    guessed: number;
-    chain: number;
-    isLearned: boolean;
-    isHard: boolean;
-  };
+  // userWord?: UserWord;
 }

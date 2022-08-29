@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { Page } from 'pages/page';
 import { AppDispatch, useAppSelector } from 'app/store';
-import { useUser, getUser, submitForm, deleteUser } from 'entities/user';
+import { useUser, submitForm, deleteUser } from 'entities/user';
 import { Box, Button, TextField, Typography } from '@mui/material';
 import { Refresh as RefreshIcon, Delete as DeleteIcon } from '@mui/icons-material';
 import * as usersApi from 'shared/api/users';
@@ -30,10 +30,6 @@ export const ProfilePage = () => {
     setInputsState({ ...inputsState, [key]: e.target.value });
   };
 
-  const handleGetUser = () => {
-    dispatch(getUser());
-  }
-
   const handleDeleteUser = () => {
     dispatch(deleteUser());
   }
@@ -45,7 +41,7 @@ export const ProfilePage = () => {
     : error;
 
   return (
-    <Page pageName={PAGES.PROFILE} title="Личный кабинет">
+    <Page pageName={PAGES.PROFILE}>
       <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
         <Box
           sx={{ flexBasis: 400, rowGap: 3, display: "flex", flexDirection: "column" }}

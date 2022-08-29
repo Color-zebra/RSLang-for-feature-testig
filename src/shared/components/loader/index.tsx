@@ -2,15 +2,21 @@ import styles from './styles.module.scss';
 import React from 'react';
 import { Theme, Box } from '@mui/material';
 
-const ldsDualRing = {
-  '&::after': {
-    border: ({ palette: { primary }}: Theme) => `6px solid ${primary}`,
-    borderColor: ({ palette: { primary }}: Theme) => `${primary} transparent ${primary} transparent`,
-  }
-}
+const defaultSize = 80;
 
-export const Loader = () => {
+const ldsDualRing = (size?: number) => ({
+  width: size || defaultSize,
+  height: size || defaultSize,
+  '&::after': {
+    border: ({ palette: { secondary }}: Theme) => `6px solid ${secondary.main}`,
+    borderColor: ({ palette: { secondary }}: Theme) => (
+      `${secondary.main} transparent ${secondary.main} transparent`
+    ),
+  }
+});
+
+export const Loader = ({ size }: { size?: number }) => {
   return (
-    <Box className={styles.ldsDualRing} sx={ldsDualRing}></Box>
+    <Box className={styles.ldsDualRing} sx={ldsDualRing(size)}></Box>
   )
 };

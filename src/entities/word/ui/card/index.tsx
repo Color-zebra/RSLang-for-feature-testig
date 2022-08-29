@@ -14,8 +14,10 @@ import {
 import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 import DoneIcon from '@mui/icons-material/Done';
 import { makeAbsUrl } from '../../../../shared/constants';
-import { Word, UserWord } from 'entities/word/model';
+import { Word } from 'entities/word/model';
+import { UserWord, UserWordDifficulty } from 'shared/api/users-words';
 import styles from './styles.module.scss';
+import { dateToJson } from 'shared/lib';
 
 export type WordCardProps = {
   word: Word;
@@ -28,12 +30,13 @@ export const WordCard = (props: WordCardProps) => {
 
   //! mock
   const userWord: UserWord = {
-    difficulty: 'easy',
+    difficulty: UserWordDifficulty.EASY,
     optional: {
       totalUsed: 8,
       guessed: 6,
       chain: 5,
       isLearned: true,
+      learnDate: dateToJson(new Date(0)),
       isHard: false,
     },
   };
@@ -79,7 +82,12 @@ export const WordCard = (props: WordCardProps) => {
         />
       )}
 
-      <CardMedia component='img' image={makeAbsUrl(word.image)} alt={word.word} />
+      <CardMedia
+        component='img'
+        image={makeAbsUrl(word.image)}
+        alt={word.word}
+        sx={{ height: 200 }}
+      />
 
       <CardContent>
         <Typography variant='subtitle1'>Значение:</Typography>
@@ -97,7 +105,7 @@ export const WordCard = (props: WordCardProps) => {
       </CardContent>
 
       {userWord && (
-        <Stack direction='row' spacing={2} sx={{ justifyContent: 'center', pb: 2 }}>
+        <Stack direction='row' spacing={2} sx={{ justifyContent: 'center', pb: 2, mt: 'auto' }}>
           <Chip
             label={userWord.optional.isLearned ? 'в изученных' : 'в изученные'}
             onClick={toggleUserWord}

@@ -1,5 +1,14 @@
+
 export const baseUrl = 'http://localhost:3001';
 // export const baseUrl = 'https://react-learnwords-jsfe2022.herokuapp.com';
+
+export const TOTAL_GROUPS = 6;
+export const TOTAL_WORDS = 3600;
+export const WORDS_PER_PAGE = 20;
+export const MAX_PAGE = TOTAL_WORDS / TOTAL_GROUPS / WORDS_PER_PAGE - 1;
+export const LEARN_CHAIN = 2;
+export const GAME_COUNTDOWN = 1;
+export const MAX_WORDS_IN_GAME = 20;
 
 export const makeAbsUrl = (url: string) => `${baseUrl}/${url}`;
 
@@ -18,4 +27,9 @@ export enum PAGES {
   AUTH = 'auth',
   NOT_FOUND = 'not-found',
   PROFILE = 'profile',
+}
+
+export enum GAME {
+  AUDIO = 'audio',
+  SPRINT = 'sprint',
 }

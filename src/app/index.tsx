@@ -1,23 +1,21 @@
 import './index.scss';
+import React from 'react';
 import { withProviders } from './providers';
 import { Routing } from 'pages';
 import { AuthModal } from 'pages/user/auth-modal';
-import { AppDispatch } from 'app/store';
-import { useDispatch } from 'react-redux';
-import { loadUserFromStorage } from 'entities/user';
-import React from 'react';
+import { useNoScrollFit } from 'shared/lib';
 
 const App = () => {
-  const dispatch: AppDispatch = useDispatch();
-
-  React.useEffect(() => {
-    dispatch(loadUserFromStorage());
-  }, [dispatch]);
+  const { isNoScrollFit } = useNoScrollFit();
 
   return (
     <>
       <AuthModal />
-      <div className="app" >
+      <div className="app" style={{
+        paddingTop: isNoScrollFit
+          ? "var(--header-height)"
+          : 0,
+      }}>
         <Routing />
       </div>
     </>
